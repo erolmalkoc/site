@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boks Salonu Admin Paneli</title>
+  <style>
+    /* Genel stiller */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    .admin-panel {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: #1d1406;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #444;
+    }
+
+    .stats {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      margin-bottom: 2rem;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #0056b3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background-color: #fff;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .delete-btn {
+      background-color: #FF4D4D;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
+      background-color: #b30000;
+    }
+  </style>
+</head>
+<body>
+<div class="admin-panel">
+  <header>
+    <h1>Boks Salonu Admin Paneli</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#dersler">Ders Yönetimi</a></li>
+      <li><a href="#branslar">Branş Yönetimi</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Dashboard Bölümü -->
+    <section id="dashboard">
+      <h2>Genel Bilgiler</h2>
+      <div class="stats">
+        <div class="card">Toplam Ders: 10</div>
+        <div class="card">Toplam Branş: 5</div>
+        <div class="card">Aktif Üyeler: 120</div>
+      </div>
+    </section>
+
+    <!-- Ders Yönetimi Bölümü -->
+    <section id="dersler">
+      <h2>Ders Yönetimi</h2>
+      <form id="add-lesson-form">
+        <label for="lesson-name">Ders Adı:</label>
+        <input type="text" id="lesson-name" placeholder="Ders adı girin" required>
+
+        <label for="lesson-day">Gün:</label>
+        <select id="lesson-day" required>
+          <option value="Pazartesi">Pazartesi</option>
+          <option value="Salı">Salı</option>
+          <option value="Çarşamba">Çarşamba</option>
+          <option value="Perşembe">Perşembe</option>
+          <option value="Cuma">Cuma</option>
+        </select>
+
+        <label for="lesson-time">Saat:</label>
+        <input type="time" id="lesson-time" required>
+
+        <button type="submit">Ders Ekle</button>
+      </form>
+
+      <ul id="lesson-list">
+        <li>Kickboks - Pazartesi 18:00 <button class="delete-btn">Sil</button></li>
+        <li>Muay Thai - Salı 19:00 <button class="delete-btn">Sil</button></li>
+      </ul>
+    </section>
+
+    <!-- Branş Yönetimi Bölümü -->
+    <section id="branslar">
+      <h2>Branş Yönetimi</h2>
+      <form id="add-branch-form">
+        <label for="branch-name">Branş Adı:</label>
+        <input type="text" id="branch-name" placeholder="Branş adı girin" required>
+
+        <button type="submit">Branş Ekle</button>
+      </form>
+
+      <ul id="branch-list">
+        <li>Kickboks <button class="delete-btn">Sil</button></li>
+        <li>Muay Thai <button class="delete-btn">Sil</button></li>
+      </ul>
+    </section>
+  </main>
+</div>
+</body>
+</html>

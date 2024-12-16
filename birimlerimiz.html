@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOKS CENTER</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <style>
+    :root {
+      --primary-color: #ebcd25;
+      --secondary-color: #af9e1e;
+      --accent-color: #f6dd3b;
+      --text-color: #37351f;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-image: url(images/thumb-1920-798026.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+    header h1 {
+      margin: 0;
+      color: var(--text-color);
+    }
+
+    .content {
+      padding: 20px;
+      width: 100%;
+      margin-top: 200px;
+      box-sizing: border-box;
+    }
+
+    .unit:hover {
+      scale: 1.02;
+    }
+
+    .units {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 100px;
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+
+    p {
+      line-height: 1.6;
+    }
+
+    .unit {
+      background-color: var(--accent-color);
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .unit h2 {
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        padding: 10px;
+      }
+
+      .unit {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <section class="header">
+    <header class="header_section">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">ANA SAYFA</a></li>
+                <li><a href="about.html">HAKKINDA</a></li>
+                <li class="sub_top">
+                    <a href="#" onclick="toggleMenu('urunlerMenu')">ÜRÜNLERİMİZ</a>
+                    <ul id="urunlerMenu" class="submenu">
+                        <li><a href="class.html#sinif-detaylari">KİCK BOKS</a></li>
+                        <li><a href="class.html#sinif-detaylari">BOKS</a></li>
+                        <li><a href="class.html#sinif-detaylari">MUAY THAİ</a></li>
+                    </ul>
+                </li>
+                <li><a href="mission-vision.html">MİSYON & VİZYON</a></li>
+                <li class="sub_top">
+                    <a href="#" onclick="toggleMenu('birimlerMenu')">BİRİMLERİMİZ</a>
+                    <ul id="birimlerMenu" class="submenu">
+                      <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+                      <li><a href="birimlerimiz.html#finans-birimi">FİNANS BİRİMİ</a></li>
+                      <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link" href="contact.html">İLETİŞİM</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleNavbar()">☰</div>
+        </nav>
+    </header>
+  </section>
+
+  <main class="content">
+    <div class="units">
+      <!-- Eğitim Birimi -->
+      <div class="unit" id="egitim-birimi">
+        <h2>Eğitim Birimi</h2>
+        <p>Eğitim Birimi, Box Şirketi'nin temel taşlarından biridir. Çalışanlarımızın mesleki ve kişisel gelişimlerini
+          desteklemek amacıyla çeşitli eğitim programları düzenlemektedir. Bu birim, yazılım geliştirme, müşteri
+          ilişkileri, veri analitiği gibi teknik eğitimlerin yanı sıra liderlik ve zaman yönetimi gibi kişisel
+          becerilere yönelik kurslar da sunmaktadır. Eğitim birimimizin öncelikli amacı, ekip üyelerimizin sürekli
+          öğrenme ve gelişim ruhunu benimsemelerini sağlamak ve şirketimizin başarı grafiğini yukarı taşımaktır. Online
+          eğitim modüllerinden, yüz yüze seminerlere kadar geniş bir yelpazede fırsatlar sunan Eğitim Birimi, aynı
+          zamanda yeni başlayan çalışanlarımız için kapsamlı bir oryantasyon programı da yürütmektedir.</p>
+      </div>
+
+      <!-- Finans Birimi -->
+      <div id="finans-birimi" class="unit" >
+        <h2>Finans Birimi</h2>
+        <p>Finans Birimi, şirketin mali istikrarını ve büyümesini sağlamak için stratejik planlamalar yapar. Gelir-gider
+          yönetimi, mali analizler, bütçeleme ve finansal risklerin yönetimi gibi önemli süreçlerden sorumludur. Finans
+          ekibimiz, şirketin yatırım kararlarını desteklemek için piyasa trendlerini yakından takip eder ve analiz eder.
+          Bunun yanı sıra, muhasebe işlemleri ve vergi planlaması gibi operasyonel detayları da titizlikle yürütür.
+          Finans birimimiz, sadece rakamlara değil, aynı zamanda bu rakamların arkasındaki hikayelere de odaklanarak, iş
+          ortaklarımızla güçlü ilişkiler kurar ve şirketin uzun vadeli başarısına katkı sağlar.</p>
+      </div>
+
+      <!-- Destek Birimi -->
+      <div class="unit" id="destek-birimi">
+        <h2>Destek Birimi</h2>
+        <p>Destek Birimi, müşteri memnuniyetini en üst düzeyde tutmak amacıyla 7/24 hizmet vermektedir. Bu birim, teknik
+          sorunların hızlı bir şekilde çözülmesini sağlayarak müşterilerimizin kesintisiz bir deneyim yaşamasını garanti
+          eder. Teknik destekten müşteri ilişkilerine kadar geniş bir hizmet yelpazesi sunan Destek Birimi, her
+          müşterinin özel ihtiyaçlarına göre kişiselleştirilmiş çözümler üretir. Ayrıca, geri bildirimleri dikkatle
+          değerlendirerek ürün ve hizmet kalitemizi sürekli iyileştirmek için çalışmalar yapar. Müşteri deneyimi
+          yönetiminde yenilikçi yaklaşımlar benimseyen Destek Birimimiz, şirketimizin güvenilirliğini ve itibarını
+          koruma konusunda önemli bir rol üstlenmektedir.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <div class="footer_container">
+        <div>
+          <ul>
+            <li><a href="index.html">ANA SAYFA </a></li>
+            <li><a href="about.html">HAKKIMIZDA</a></li>
+            <li><a href="contact.html">İLETİŞİM</a></li>
+            <li><a href="mission-vision.html">MİSYONUMUZ</a></li>
+            <li><a href="mission-vision.html">VİZYONUMUZ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="class.html">ÜRÜNLER</a></li>
+            <li><a href="#class.html#sinif-detaylari">BOKS</a></li>
+            <li><a href="#class.html#sinif-detaylari">KİCKBOKS</a></li>
+            <li><a href="#class.html#sinif-detaylari">MUAYTHAİ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="birimlerimiz.html">BİRİMLERİMİZ</a></li>
+            <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#finans-birimi"">FİNANS BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="image_footer">
+        <a href="https://tr-tr.facebook.com/adem.bozkurt.3367174"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/adem_bozkurt/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCFvBRxk_SX3C8t6hp9pmNOg"><img src="images/youtube.png" alt="YouTube"></a>
+      </div>
+      </div>
+   
+      <p>&copy; 2024 Boxer Center, Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+  <!-- end info section -->
+
+  <script>
+    function toggleMenu(id) {
+      const menu = document.getElementById(id);
+      const allMenus = document.querySelectorAll('.submenu');
+      allMenus.forEach(m => {
+        if (m !== menu) {
+          m.style.display = 'none';
+        }
+      });
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+
+    function toggleNavbar() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

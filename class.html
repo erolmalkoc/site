@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Boxer Center</title>
+
+  <!-- Slider Stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+
+  <!-- Fonts Style -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+Chettan&family=Dosis:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/navbar.css">
+
+  <style>
+    body {
+      background-image: url(images/thumb-1920-798026.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .hero-section {
+      background-image: url('images/bullboks.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+      padding: 200px 0;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-section p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-section .btn-primary {
+      font-size: 1.2rem;
+      padding: 10px 30px;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+
+    .hero-section .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .class-box {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .class-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .class-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .class-box-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .campaigns .p-4 {
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .campaigns .p-4:hover {
+      background-color: #f8f9fa;
+    }
+
+    .footer-section {
+      background-color: #212529;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .footer-section p {
+      margin: 0;
+    }
+
+    .sticky-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header_about,
+    .vm_header {
+      position: relative;
+      height: 50px;
+      width: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 10px;
+      color: black;
+      padding: 2px;
+    }
+    .inner_header_about h1{
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .inner_header_about {
+      background-color: #ebcd25;
+      box-shadow: 0px 1px 16px -6px;
+      border-radius: 10px;
+      height: 40px;
+      width: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .header_about::before,
+    .header_vision::before {
+      content: "";
+      height: 300px;
+      width: 20px;;
+      position: absolute;
+      background-color: black;
+      animation: animate 3s linear infinite;
+      filter: blur(0.3rem);
+    }
+
+    .header_mision::before {
+      content: "";
+      position: absolute;
+      background-color: #ebcd25;
+      animation: animate_reverse 3s linear infinite;
+      filter: blur(0.3rem);
+    }
+
+    .header_about::after,
+    .vm_header::after {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border-radius: 10px;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes animate_reverse {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header_section">
+    <nav>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <div class="menu-toggle" onclick="toggleNavbar()">☰</div>
+    </nav>
+    <ul class="menu">
+      <li><a href="index.html">ANA SAYFA</a></li>
+      <li><a href="about.html">HAKKINDA</a></li>
+      <li class="sub_top">
+        <a href="#" onclick="toggleMenu('urunlerMenu')">ÜRÜNLERİMİZ</a>
+        <ul id="urunlerMenu" class="submenu">
+          <li><a href="class.html">Kick Boks</a></li>
+          <li><a href="class.html">Boks</a></li>
+          <li><a href="class.html">Muay Thai</a></li>
+        </ul>
+      </li>
+      <li><a href="mission-vision.html">MİSYON & VİZYON</a></li>
+      <li class="sub_top">
+        <a href="#" onclick="toggleMenu('birimlerMenu')">BİRİMLERİMİZ</a>
+        <ul id="birimlerMenu" class="submenu">
+          <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+          <li><a href="birimlerimiz.html#finans-birimi">FİNANS BİRİMİ</a></li>
+          <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-link" href="contact.html">İletişim</a></li>
+    </ul>
+
+  </header>
+
+  
+  <section class="hero-section">
+    <div class="container">
+      <a href="#sinif-detaylari" class="btn btn-primary">Sınıf Detaylarına Git</a>
+    </div>
+  </section>
+  
+  <section id="sinif-detaylari" style="color: white;"></section>>
+    <div class="container">
+      <h1>SINIF DETAYLARI</h1>
+      <p>Eğitmenlerimizden profesyonel eğitim alarak hedeflerinize ulaşın!</p>
+    </div>
+  </section>
+
+  <section id="classes" class="class-details py-5">
+    <div class="container">
+      <div class="vm_header header_vision">
+        <div class="inner_header_about">
+          <h1 id="sinif-detaylari">SINIF DETAYLARI</h1>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="class-box">
+            <img src="images/boks.png" alt="Boks" />
+            <div class="class-box-content">
+              <h3>Boks</h3>
+              <p>Fiziksel ve zihinsel dayanıklılığınızı artırın.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="class-box">
+            <img src="images/kickboks.png" alt="Kick Boks" />
+            <div class="class-box-content">
+              <h3>Kick Boks</h3>
+              <p>Vücut koordinasyonunuzu geliştirin.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="class-box">
+            <img src="images/muaytahi.png" alt="Muay Thai" />
+            <div class="class-box-content">
+              <h3>Muay Thai</h3>
+              <p>Tekniklerinizi ve stratejinizi güçlendirin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="campaigns" class="campaigns py-5">
+    <div class="container">
+      <div class="vm_header header_vision">
+        <div class="inner_header_about">
+          <h1>KAMPANYALAR</h1>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 text-center bg-white shadow-sm">
+            <h3>İlk Ay Ücretsiz!</h3>
+            <p>Şimdi kaydolun, ilk ay ücretsiz başlayın.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 text-center bg-white shadow-sm">
+            <h3>Aile İndirimi!</h3>
+            <p>İkinci ve sonraki üyeler için %20 indirim.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 text-center bg-white shadow-sm">
+            <h3>Özel Antrenmanlar</h3>
+            <p>Kişisel eğitimlerle hedeflerinize ulaşın.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <div class="footer_container">
+        <div>
+          <ul>
+            <li><a href="index.html">ANA SAYFA </a></li>
+            <li><a href="about.html">HAKKIMIZDA</a></li>
+            <li><a href="contact.html">İLETİŞİM</a></li>
+            <li><a href="mission-vision.html">MİSYONUMUZ</a></li>
+            <li><a href="mission-vision.html">VİZYONUMUZ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="class.html">ÜRÜNLER</a></li>
+            <li><a href="#class.html#sinif-detaylari">BOKS</a></li>
+            <li><a href="#class.html#sinif-detaylari">KİCKBOKS</a></li>
+            <li><a href="#class.html#sinif-detaylari">MUAYTHAİ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="birimlerimiz.html">BİRİMLERİMİZ</a></li>
+            <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#finans-birimi"">FİNANS BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="image_footer">
+        <a href="https://tr-tr.facebook.com/adem.bozkurt.3367174"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/adem_bozkurt/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCFvBRxk_SX3C8t6hp9pmNOg"><img src="images/youtube.png" alt="YouTube"></a>
+      </div>
+      <p>&copy; 2024 Boxer Center, Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

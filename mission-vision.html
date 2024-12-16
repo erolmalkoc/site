@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOKS CENTER</title>
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  
+  <style>
+    body{
+      background-image: url(images/thumb-1920-798026.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    .content {
+      padding: 50px 20px;
+      text-align: center;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .content .box {
+      max-width: 800px;
+      margin: auto;
+      background-color: #ebcd25;
+      color: black;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      margin-bottom: 30px;
+    }
+    .content h2 {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 1.2em;
+      line-height: 1.8em;
+    }
+    @media (max-width: 768px) {
+      .content .box {
+        padding: 20px;
+      }
+      .content h2 {
+        font-size: 2em;
+      }
+      .content p {
+        font-size: 1em;
+      }
+    }
+    
+.header_about,
+.vm_header {
+  position: relative;
+  height: 104px;
+  width: 244px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 20px 30px 20px 30px;
+}
+.inner_header_about {
+  background-color: #ebcd25;
+  box-shadow: 0px 1px 16px -6px;
+  border-radius: 20px 30px 20px 30px;
+  height: 95px;
+  width: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.header_about::before,
+.header_vision::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 50px;
+  background-color: black;
+  animation: animate 1s linear infinite;
+  filter: blur(0.3rem);
+}
+.header_mision::before{
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 50px;
+  background-color: #ebcd25;
+  animation: animate_reverse 1s linear infinite;
+  filter: blur(0.3rem);
+}
+.header_about::after,
+.vm_header::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 10px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate_reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+  </style>
+ 
+</head>
+
+<body>
+  
+    <!-- Header Section -->
+<section class="header">
+  <header class="header_section">
+      <nav>
+          <div class="logo">
+              <img src="images/logo.png" alt="Logo">
+          </div>
+          <ul class="menu">
+              <li><a href="index.html">ANA SAYFA</a></li>
+              <li><a href="about.html">HAKKINDA</a></li>
+              <li class="sub_top">
+                  <a href="#" onclick="toggleMenu('urunlerMenu')">ÜRÜNLERİMİZ</a>
+                  <ul id="urunlerMenu" class="submenu">
+                      <li><a href="class.html#sinif-detaylari">KİCK BOKS</a></li>
+                      <li><a href="class.html#sinif-detaylari">BOKS</a></li>
+                      <li><a href="class.html#sinif-detaylari">MUAY THAİ</a></li>
+                  </ul>
+              </li>
+              <li><a href="mission-vision.html">MİSYON & VİZYON</a></li>
+              <li class="sub_top">
+                  <a href="#" onclick="toggleMenu('birimlerMenu')">BİRİMLERİMİZ</a>
+                  <ul id="birimlerMenu" class="submenu"
+                    <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+                    <li><a href="birimlerimiz.html#finans-birimi"">FİNANS BİRİMİ</a></li>
+                    <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+                  </ul>
+              </li>
+              <li><a class="nav-link" href="contact.html">İLETİŞİM</a></li>
+          </ul>
+          <div class="menu-toggle" onclick="toggleNavbar()">☰</div>
+      </nav>
+  </header>
+</section>
+  
+      </header>
+    </section>
+  <div class="content">
+    <div class="vm_header header_vision">
+      <div class="inner_header_about">
+          <h1>ViZYONUMUZ</h1>
+      </div>
+  </div>
+    <div class="box">
+      
+      <p>
+        Bireylerin fiziksel ve zihinsel sağlıklarını geliştirmek amacıyla kaliteli bir eğitim sunmak, topluma özgüveni yüksek ve disiplinli bireyler kazandırmak en büyük önceliğimizdir. Dövüş sporlarının bir spor dalı olmanın ötesinde, bir yaşam felsefesi olduğunu biliyoruz ve bu felsefeyi tüm katılımcılarımıza aşılamayı hedefliyoruz. Boks, kick boks ve muay thai gibi disiplinlerle sadece fiziksel gelişim değil, aynı zamanda karakter gelişimine de katkıda bulunuyoruz. Her bireyin kendi potansiyelini keşfetmesi için ilham verici bir ortam sunmayı misyon edindik.
+      </p>
+    </div>
+    <div class="vm_header header_vision">
+      <div class="inner_header_about">
+          <h1>MİSYONUMUZ</h1>
+      </div>
+  </div>
+    <div class="box">
+      <p>
+        Vizyonumuz, ulusal ve uluslararası arenada dövüş sporları alanında lider bir eğitim merkezi olmaktır. Sporcularımızı yalnızca fiziksel olarak değil, aynı zamanda zihinsel olarak da güçlendirmek için en modern yöntem ve araçlarla destekliyoruz. Toplumun her kesimine sporun önemini aşılayarak, sağlıklı yaşamın temelini oluşturan disiplinli bir çalışma anlayışını yaygınlaştırmayı amaçlıyoruz. Ayrıca, yeni nesil sporcular yetiştirerek, dövüş sporlarının sadece bireysel başarılar için değil, toplumsal gelişim için de bir araç olduğunu göstermeyi hedefliyoruz.      </p>
+    </div>
+  </div>
+
+
+  <footer>
+    <div>
+      <div class="footer_container">
+        <div>
+          <ul>
+            <li><a href="index.html">ANA SAYFA </a></li>
+            <li><a href="about.html">HAKKIMIZDA</a></li>
+            <li><a href="contact.html">İLETİŞİM</a></li>
+            <li><a href="mission-vision.html">MİSYONUMUZ</a></li>
+            <li><a href="mission-vision.html">VİZYONUMUZ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="class.html">ÜRÜNLER</a></li>
+            <li><a href="#sinif-detaylari">BOKS</a></li>
+            <li><a href="#sinif-detaylari">KİCKBOKS</a></li>
+            <li><a href="#sinif-detaylari">MUAYTHAİ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="birimlerimiz.html">BİRİMLERİMİZ</a></li>
+            <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#finans-birimi">FİNANS BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="image_footer">
+        <a href="https://tr-tr.facebook.com/adem.bozkurt.3367174"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/adem_bozkurt/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCFvBRxk_SX3C8t6hp9pmNOg"><img src="images/youtube.png" alt="YouTube"></a>
+      </div>
+      <p>&copy; 2024 Boxer Center, Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+  <!-- end info section -->
+    
+    <script>
+      function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            const allMenus = document.querySelectorAll('.submenu');
+            allMenus.forEach(m => {
+                if (m !== menu) {
+                    m.style.display = 'none';
+                }
+            });
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        function toggleNavbar() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

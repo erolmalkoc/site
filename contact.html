@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOKS CENTER</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+        :root {
+            --primary-color: #ebcd25;
+            --secondary-color: #af9e1e;
+            --accent-color: #f6dd3b;
+            --text-color: #37351f;
+            --light-bg: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+            background-image: url(images/thumb-1920-798026.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .contact-header {
+            background: url('oxer-html/images/octagan.png') no-repeat center center/cover;
+            color: white;
+            padding: 100px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border: none;
+            padding: 15px 30px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(235, 212, 37, 0.4);
+        }
+
+        .contact-info {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            margin-top: 40px;
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .social-media a {
+            color: var(--primary-color);
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .contact-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 30px;
+            }
+        }
+
+        .container {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+   
+
+    <section class="header">
+        <header class="header_section">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html">ANA SAYFA</a></li>
+                    <li><a href="about.html">HAKKINDA</a></li>
+                    <li class="sub_top">
+                        <a href="#" onclick="toggleMenu('urunlerMenu')">ÜRÜNLERİMİZ</a>
+                        <ul id="urunlerMenu" class="submenu">
+                            <li><a href="class.html#sinif-detaylari">KİCK BOKS</a></li>
+                            <li><a href="class.html#sinif-detaylari">BOKS</a></li>
+                            <li><a href="class.html#sinif-detaylari">MUAY THAİ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="mission-vision.html">MİSYON & VİZYON</a></li>
+                    <li class="sub_top">
+                        <a href="#" onclick="toggleMenu('birimlerMenu')">BİRİMLERİMİZ</a>
+                        <ul id="birimlerMenu" class="submenu">
+            <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#finans-birimi">FİNANS BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link" href="contact.html">İLETİŞİM</a></li>
+                </ul>
+                <div class="menu-toggle" onclick="toggleNavbar()">☰</div>
+            </nav>
+        </header>
+    </section>
+    
+
+
+
+
+    <!-- Header -->
+    <header class="contact-header">
+        <div class="container" data-aos="fade-up">
+            <h1>Bize Ulaşın</h1>
+            <p class="lead fs-4">Sizin için buradayız! Sorularınızı yanıtlamaktan memnuniyet duyarız.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <!-- Contact Form -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-form">
+                        <h3 class="section-title">Mesaj Gönderin</h3>
+                        <form id="contactForm">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Adınız" required
+                                    aria-label="Adınız">
+                                <label for="name">Adınız</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="E-posta" required
+                                    aria-label="E-posta Adresiniz">
+                                <label for="email">E-posta Adresiniz</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" placeholder="Mesajınız" required
+                                    aria-label="Mesajınız"></textarea>
+                                <label for="message">Mesajınız</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="bi bi-send me-2"></i>Mesajı Gönder
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="contact-info">
+                        <h3 class="section-title">İletişim Bilgileri</h3>
+                        <p><i class="bi bi-telephone"></i> +90 505 003 6661</p>
+                        <p><i class="bi bi-envelope"></i> erolmalkoc04@gmail.com</p>
+
+                        <!-- Social Media Links -->
+                        <div class="social-media mt-4">
+                            <h4 class="mb-3">Bizi Takip Edin</h4>
+                            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                                <i class="bi bi-facebook fs-3"></i>
+                            </a>
+                            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                                <i class="bi bi-twitter fs-3"></i>
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                                <i class="bi bi-instagram fs-3"></i>
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                                <i class="bi bi-linkedin fs-3"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="py-5">
+        <div class="container">
+            <div class="map-container" data-aos="fade-up">
+                <iframe width="100%" height="400" frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.487905090759!2d29.4293662118747!3d40.795271032393856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb20882f61bf33%3A0xce92b2885ae2bdd2!2sAdem%20Bozkurt!5e0!3m2!1str!2str!4v1733954460408!5m2!1str!2str"
+                    allowfullscreen aria-label="Google Maps">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div>
+          <div class="footer_container">
+            <div>
+              <ul>
+                <li><a href="index.html">ANA SAYFA </a></li>
+                <li><a href="about.html">HAKKIMIZDA</a></li>
+                <li><a href="contact.html">İLETİŞİM</a></li>
+                <li><a href="mission-vision.html">MİSYONUMUZ</a></li>
+                <li><a href="mission-vision.html">VİZYONUMUZ</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="class.html">ÜRÜNLER</a></li>
+                <li><a href="#sinif-detaylari">BOKS</a></li>
+                <li><a href="#sinif-detaylari">KİCKBOKS</a></li>
+                <li><a href="#sinif-detaylari">MUAYTHAİ</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="birimlerimiz.html">BİRİMLERİMİZ</a></li>
+            <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#finans-birimi">FİNANS BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="image_footer">
+            <a href="https://tr-tr.facebook.com/adem.bozkurt.3367174"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/adem_bozkurt/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCFvBRxk_SX3C8t6hp9pmNOg"><img src="images/youtube.png" alt="YouTube"></a>
+          </div>
+          <p>&copy; 2024 Boxer Center, Tüm Hakları Saklıdır.</p>
+        </div>
+      </footer>
+    <!-- end info section -->
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        function toggleMenu(id) {
+            const menu = document.getElementById(id);
+            const allMenus = document.querySelectorAll('.submenu');
+            allMenus.forEach(m => {
+                if (m !== menu) {
+                    m.style.display = 'none';
+                }
+            });
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        function toggleNavbar() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 1200,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+
+</html>

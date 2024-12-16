@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANASAYFA</title>
+
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/erol.css">
+
+  <style>
+    body {
+      background-image: url(images/thumb-1920-798026.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0px;
+      padding: 0px;
+      position: relative;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+
+    a,
+    ul,
+    li {
+      text-decoration: none;
+      color: black;
+      list-style-type: none;
+    }
+
+    .header {
+      margin: 0px;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 0px 10px;
+    }
+
+    .header_section {
+      box-sizing: border-box;
+      background-image: url(images/thumb-1920-798026.jpg);
+      border: 1px solid black;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 10px;
+
+      width: calc(100% - 20px);
+    }
+
+    .top_body {
+      margin-top: 0px;
+      background-image: url(images/hero-bg.png);
+      width: 100%;
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .main {
+      padding-top: 230px;
+      color: white;
+      margin: 0px auto;
+      width: 100%;
+
+    }
+
+    .main .main_container {
+      font-size: 2.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .main_container p {
+      font-size: 1.3rem;
+      margin-top: -20px;
+    }
+
+    @media screen and (max-width:1200px) {
+      nav {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .slider_section .left {
+      font-size: 10rem;
+      transform: rotateZ(90deg);
+      position: absolute;
+      margin-left: 100px;
+    }
+
+    .xer,
+    .bo {
+      font-weight: 700;
+      color: white;
+
+    }
+
+    .xer {
+      color: rgb(255, 0, 166);
+    }
+
+    .slider {
+      position: relative;
+      width: 80%;
+      max-width: 800px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      background-color: transparent;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .slide h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: white;
+    }
+
+    .slide img {
+      width: 80%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .btn-box a {
+      display: inline-block;
+      padding: 10px 20px;
+      color: black;
+      background-color: #ebcd25;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      font-weight: bold;
+    }
+
+    .btn-box a:hover {
+      background-color: #ebcd25;
+    }
+
+    .controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .control {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 25px;
+    }
+
+    .control:focus {
+      outline: none;
+    }
+
+    .control:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Kampanya bölümü */
+
+    .kampanya {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2,
+    h3 {
+      color: #ebcd25;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #111;
+      border: 1px solid #ebcd25;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ebcd25;
+      color: #000;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .card button:hover {
+      background-color: #d1b020;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 5px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+      border: 1px solid #ebcd25;
+    }
+
+    .close {
+      background-color: #ebcd25;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .close:hover {
+      background-color: #d1b020;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* Eğitmenler */
+
+    .egitmenler {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .teach_container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .teach_header h2 {
+      color: #ebcd25;
+      font-size: 2rem;
+    }
+
+    .teach_header p {
+      margin: 10px 0;
+      color: white;
+    }
+
+    .teach_slider {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .teach_card_container {
+      margin-top: 100px;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .teach_card {
+      flex: 0 0 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .teach_card img {
+      max-width: 150px;
+      border-radius: 50%;
+    }
+
+    .teach_card_content {
+      margin-top: 10px;
+    }
+
+    .teach_card_content h4 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #ebcd25;
+    }
+
+    .teach_card_content p {
+      font-size: 1rem;
+      max-width: 300px;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .teach_card img {
+        max-width: 100px;
+      }
+
+      .teach_card_content h4 {
+        font-size: 1rem;
+      }
+
+      .teach_card_content p {
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+
+    .stats_box {
+      padding: 20px;
+      border: 1px solid #ebcd25;
+      border-radius: 8px;
+      background-color: black;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      color: white;
+      width: 150px;
+      height: 150px;
+    }
+
+    .stats_box:hover {
+      transform: translateY(-5px);
+    }
+
+    .stats_box h3 {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .stats_box p {
+      font-size: 1rem;
+      margin: 0;
+      color: #555;
+    }
+
+    .text-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stats_section {
+      margin: 100px 0px;
+    }
+
+
+    .graphs {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 100px 0px;
+    }
+
+    .chart-container {
+      width: 90%;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .chart {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      height: 300px;
+      border-left: 2px solid #ccc;
+      border-bottom: 2px solid #ccc;
+      position: relative;
+      padding: 20px;
+    }
+
+    .bar {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bar div {
+      width: 100%;
+      transition: height 0.3s ease;
+    }
+
+    .bar .boks {
+      background-color: rgba(255, 0, 0, 0.2);
+      border: 2px solid rgba(255, 0, 0, 0.7);
+      height: 160px;
+    }
+
+    .bar .kickboks {
+      background-color: rgba(0, 0, 255, 0.2);
+      border: 2px solid rgba(0, 0, 255, 0.7);
+      height: 120px;
+    }
+
+    .bar .muaythai {
+      background-color: rgba(255, 165, 0, 0.2);
+      border: 2px solid rgba(255, 165, 0, 0.7);
+      height: 200px;
+    }
+
+    .bar span {
+      margin-top: 10px;
+      font-size: 16px;
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .chart {
+        height: 200px;
+      }
+
+      .bar span {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER SECTION -->
+  <section class="header">
+    <header class="header_section">
+      <nav>
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">ANA SAYFA</a></li>
+          <li><a href="about.html">HAKKINDA</a></li>
+          <li class="sub_top">
+            <a href="#" onclick="toggleMenu('urunlerMenu')">ÜRÜNLERİMİZ</a>
+            <ul id="urunlerMenu" class="submenu">
+              <li><a href="class.html">KİCK BOKS</a></li>
+              <li><a href="class.html">BOKS</a></li>
+              <li><a href="class.html">MUAY THAİ</a></li>
+            </ul>
+          </li>
+          <li><a href="mission-vision.html">MİSYON & VİZYON</a></li>
+          <li class="sub_top">
+            <a href="#" onclick="toggleMenu('birimlerMenu')">BİRİMLERİMİZ</a>
+            <ul id="birimlerMenu" class="submenu">
+            <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#finans-birimi">FİNANS BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="contact.html">İLETİŞİM</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleNavbar()">☰</div>
+      </nav>
+
+
+    </header>
+  </section>
+
+  <section class="top_body">
+    <main class="main">
+      <div class="main_container">
+        <h1 class="display-4 font-weight-bold text-white">Boks ile Kendinizi Keşfedin</h1>
+        <p class="lead text-light">Güç, hız ve dayanıklılığınızı geliştirmek için doğru yerdesiniz!</p>
+      </div>
+    </main>
+  </section>
+
+  <section class="slider_section">
+    <div>
+      <div class="left">
+        <span class="bo">BO</span>
+        <span class="xer">XER</span>
+      </div>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <h2>Güç, burada başlar! <br> Hedeflerine ulaşmak için ilk adımı bizimle at.</h2>
+            <img src="images/a.jpg" alt="Slider 1">
+            <div class="btn-box">
+              <a href="contact.html">Bizimle iletişime geç</a>
+            </div>
+          </div>
+          <div class="slide">
+            <h2>Dünyanın en iyi boksörleri <br> gibi çalış</h2>
+            <img src="images/b.jpg" alt="Slider 2">
+            <div class="btn-box">
+              <a href="class.html#sinif-detaylari">Ders ayrıntı</a>
+            </div>
+          </div>
+          <div class="slide">
+            <h2>Sadece dövüş değil <br> yaşam tarzı!</h2>
+            <img src="images/c.jpg" alt="Slider 3">
+            <div class="btn-box">
+              <a href="#kampanya-section">Kampanya</a>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="control" id="prev">&#10094;</button>
+          <button class="control" id="next">&#10095;</button>
+        </div>
+      </div>
+  </section>  
+  <section class="kampanya" id="kampanya-section">
+    <h2>Kampanyalarımız</h2>
+    <p>Boks ve diğer dövüş sporları derslerimizde özel indirimler ve fırsatlar sizleri bekliyor! 
+      Yeni başlayanlara özel %20 indirim. Hemen kayıt olun ve fırsatları kaçırmayın!</p>
+    <div class="container">
+      <div class="card">
+        <h3>Yeni Üyelik Kampanyası</h3>
+        <p>Yeni üyelikler için %20 indirim fırsatı!</p>
+        <button onclick="openModal('modal1')">Hemen Katıl</button>
+      </div>
+      <div class="card">
+        <h3>Yaklaşan Etkinlik</h3>
+        <p>Boks Workshop: 15 Aralık 2024</p>
+        <button onclick="openModal('modal2')">Detayları Gör</button>
+      </div>
+      <div class="card">
+        <h3>Kazandıran Tavsiye</h3>
+        <p>Arkadaşını getir, %10 indirim kazan!</p>
+        <button onclick="openModal('modal3')">Tavsiye Et</button>
+      </div>
+      <div class="card">
+        <h3>Şampiyonlar Kampanyası</h3>
+    <p>6 aylık üyeliklerde boks eldiveni hediye!</p>
+    <button onclick="openModal('modal4')">Detayları Gör</button>
+  </div>
+  <div class="card">
+    <h3>İlk Ders Ücretsiz</h3>
+    <p>Boksa başlamak isteyenlere ilk ders ücretsiz fırsatı!</p>
+    <button onclick="openModal('modal5')">Hemen Başvur</button>
+  </div>
+    </div>
+  </section>
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h3>Yeni Üyelik Kampanyası</h3>
+    <p>Yeni üyeliklerde %20 indirim kazanın! Şimdi üye olun ve avantajlardan faydalanın.</p>
+    <button class="close" onclick="closeModal('modal1')">Kapat</button>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <h3>Boks Workshop</h3>
+    <p>15 Aralık 2024 tarihinde gerçekleşecek olan etkinliğimize katılın. Eğlenceli ve eğitici bir deneyim sizi bekliyor!</p>
+    <button class="close" onclick="closeModal('modal2')">Kapat</button>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <h3>Arkadaşını Getir</h3>
+    <p>Bir arkadaşını getir ve bir hafta ücretsiz antrenman fırsatını yakala! Şimdi arkadaşını davet et.</p>
+    <button class="close" onclick="closeModal('modal3')">Kapat</button>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <h3>Şampiyonlar Kampanyası</h3>
+    <p>6 aylık üyeliklerde profesyonel boks eldiveni hediyemizi kaçırmayın! Detaylar için hemen inceleyin.</p>
+    <button class="close" onclick="closeModal('modal4')">Kapat</button>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <h3>İlk Ders Ücretsiz</h3>
+    <p>Boksa başlamak isteyenlere özel, ilk dersimiz ücretsiz! Şimdi başvurun ve deneyimi yaşayın.</p>
+    <button class="close" onclick="closeModal('modal5')">Kapat</button>
+  </div>
+</div>
+
+
+
+  <section class="egitmenler">
+    <div class="teach_container">
+      <div class="teach_header">
+        <h2>Eğitmenlerimiz</h2>
+        <p>Şampiyonlar salonlardan çıkmaz. Şampiyonlar içlerinde tutku, hayal ve amaç olan insanlardan çıkar.</p>
+        <p>- Muhammed Ali</p>
+      </div>
+      <div class="teach_slider">
+        <div class="teach_card_container">
+          <div class="teach_card">
+            <img src="images/client1.png" alt="Jone Moe">
+            <div class="teach_card_content">
+              <h4>Cansın İçim</h4>
+              <p>10 yıllık profesyonel boks deneyimiyle Türkiye şampiyonu olan Cansın İçim, hem teknik hem de dayanıklılık odaklı bir eğitim sunuyor.</p>
+        
+            </div>
+          </div>
+          <div class="teach_card">
+            <img src="images/client2.png" alt="Erol Malkoç">
+            <div class="teach_card_content">
+              <h4>Erol Malkoç</h4>
+              <p>Uluslararası turnuvalarda birçok madalya kazanan Erol Malkoç, kadın sporculara özel tekniklerle birebir eğitimler veriyor.</p>
+       
+            </div>
+          </div>
+          <div class="teach_card">
+            <img src="images/client1.png" alt="Barkın Emre Sayar">
+            <div class="teach_card_content">
+              <h4>Barkın Emre Sayar</h4>
+              <p>Eski milli boksör Barkın Emre Sayar, savunma teknikleri ve güç artırıcı programlarla öğrencilerini zirveye taşıyor.</p>
+           
+            </div>
+          </div>
+          <div class="teach_card">
+            <img src="images/client2.png" alt="Doğukan Kıralı">
+            <div class="teach_card_content">
+              <h4>Doğukan Kıralı</h4>
+              <p>Gençlere özel eğlenceli ve etkili boks dersleri sunan Doğukan Kıralı, temel tekniklerden ileri seviyeye kadar her aşamada destek sağlıyor</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- İstatistik Bölümü -->
+  <section class="stats_section">
+    <div class="container">
+      <div class="text-center">
+        <div class="col-6 col-md-2 offset-md-1 mb-4 mb-md-0">
+          <div class="stats_box">
+            <h3>+400</h3>
+            <p>ÜYE</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-2 mb-4 mb-md-0">
+          <div class="stats_box">
+            <h3>+10</h3>
+            <p>ANTRENÖR</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-2 mb-4 mb-md-0">
+          <div class="stats_box">
+            <h3>+30</h3>
+            <p>DERS</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-2 mb-4 mb-md-0">
+          <div class="stats_box">
+            <h3>+100</h3>
+            <p>BAŞARI</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-2 mb-4 mb-md-0">
+          <div class="stats_box">
+            <h3>+800</h3>
+            <p>SAAT EĞİTİM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="graphs">
+    <div class="chart-container">
+      <div class="chart">
+        <div class="bar">
+          <div class="boks"></div>
+          <span>Boks</span>
+        </div>
+        <div class="bar">
+          <div class="kickboks"></div>
+          <span>Kickboks</span>
+        </div>
+        <div class="bar">
+          <div class="muaythai"></div>
+          <span>Muay Thai</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div>
+      <div class="footer_container">
+        <div>
+          <ul>
+            <li><a href="index.html">ANA SAYFA </a></li>
+            <li><a href="about.html">HAKKIMIZDA</a></li>
+            <li><a href="contact.html">İLETİŞİM</a></li>
+            <li><a href="mission-vision.html">MİSYONUMUZ</a></li>
+            <li><a href="mission-vision.html">VİZYONUMUZ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="class.html">ÜRÜNLER</a></li>
+            <li><a href="class.html#sinif-detaylari">BOKS</a></li>
+            <li><a href="class.html#sinif-detaylari">KİCKBOKS</a></li>
+            <li><a href="#class.html#sinif-detaylari">MUAYTHAİ</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><a href="birimlerimiz.html">BİRİMLERİMİZ</a></li>
+            <li><a href="birimlerimiz.html">EĞİTİM BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#finans-birimi">FİNANS BİRİMİ</a></li>
+            <li><a href="birimlerimiz.html#destek-birimi">DESTEK BİRİMİ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="image_footer">
+        <a href="https://tr-tr.facebook.com/adem.bozkurt.3367174"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="https://x.com/adem__bozkurt"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/adem_bozkurt/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.youtube.com/channel/UCFvBRxk_SX3C8t6hp9pmNOg"><img src="images/youtube.png" alt="YouTube"></a>
+      </div>
+      <p>&copy; 2024 Boxer Center, Tüm Hakları Saklıdır.</p>
+    </div>
+  </footer>
+  <!-- end info section -->
+
+
+
+
+
+  <script>
+    // header section
+    function toggleMenu(id) {
+      const menu = document.getElementById(id);
+      const allMenus = document.querySelectorAll('.submenu');
+      allMenus.forEach(m => {
+        if (m !== menu) {
+          m.style.display = 'none';
+        }
+      });
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    }
+
+    function toggleNavbar() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('active');
+    }
+
+
+    //slider
+
+    const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slide');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
+    }
+
+    function showSlide(index) {
+      if (index < 0) {
+        currentIndex = slide.length - 1;
+      } else if (index >= slide.length) {
+        currentIndex = 0;
+      } else {
+        currentIndex = index;
+      }
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prev.addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+      resetAutoSlide();
+    });
+
+    next.addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+      resetAutoSlide();
+    });
+
+    autoSlideInterval = setInterval(() => showSlide(currentIndex + 1), 5000);
+
+
+    //Kampanya tıklamaları
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'flex';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+
+
+    const sliderContainer = document.querySelector('.teach_card_container');
+    let sayac = 0;
+    const totalCards = document.querySelectorAll('.teach_card').length;
+
+    function slideCards() {
+      sayac = (sayac + 1) % totalCards;
+      const translateX = -sayac * 100;
+      sliderContainer.style.transform = `translateX(${translateX}%)`;
+    }
+
+    setInterval(slideCards, 3000);
+  </script>
+</body>
+
+</html>
